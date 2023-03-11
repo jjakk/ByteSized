@@ -1,4 +1,4 @@
-import '../styles/components/Link-style.css'
+import '../styles/components/Link.css'
 
 const Link = (props) => {
     const {text} = props

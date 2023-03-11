@@ -1,4 +1,4 @@
-import '../styles/components/TopicSelector-style.css'
+import '../styles/components/TopicSelector.css'
 
 const TopicSelector = (props) => {
     const {completed, week, topic} = props;
