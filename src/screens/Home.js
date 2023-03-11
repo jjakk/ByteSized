@@ -16,7 +16,7 @@ const Home = () => {
 
     return(
         <div className="container">
-            <img src='./logo.svg'></img>
+            <img className='logo 'src='./logo.svg'></img>
             <Header>Weekly Bytes</Header>
             {topicList}
         </div>
