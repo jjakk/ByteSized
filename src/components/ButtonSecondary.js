@@ -1,8 +1,9 @@
 import '../styles/components/ButtonSecondary-style.css'
 
-const ButtonSecondary = () => {
+const ButtonSecondary = (props) => {
+    const {text} = props
     return (
-        <button className="Button">Button</button>
+        <button className="Button">{text}</button>
     )
 }
 
