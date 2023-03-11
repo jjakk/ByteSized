@@ -2,11 +2,17 @@ import '../styles/components/Button.css';
 
 const Button = (props) => {
     const {
-        text,
-        secondary=false
+        children,
+        secondary=false,
+        style
     } = props;
     return(
-        <button className={`Button ${secondary ? "secondary" : ""}`}>{text}</button>
+        <button
+            className={`Button ${secondary ? "secondary" : ""}`}
+            style={style}
+        >
+            {children}
+        </button>
     )
 }
 

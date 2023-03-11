@@ -1,9 +1,9 @@
 import '../styles/components/Link.css'
 
 const Link = (props) => {
-    const {text} = props
+    const {children, href, style} = props
     return(
-        <a className='Link'>{text}</a>
+        <a className='Link' href={href} style={style}>{children}</a>
     )
 }
 

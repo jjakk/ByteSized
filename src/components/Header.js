@@ -1,8 +1,8 @@
 import '../styles/components/Header.css'
 
 const Header = (props) => {
-    const {text} = props
+    const {children} = props
     return(
-        <h1 className='Header'>{text}</h1>
+        <h1 className='Header'>{children}</h1>
     )
 }

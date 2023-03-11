@@ -1,8 +1,10 @@
 import '../styles/components/Subheader.css'
 
 const Subheader = (props) => {
-    const {text} = props
+    const {children} = props;
     return(
-        <h1 className='Subheader'>{text}</h1>
+        <h1 className='Subheader'>{children}</h1>
     )
 }
+
+export default Subheader;

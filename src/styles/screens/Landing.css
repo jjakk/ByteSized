@@ -6,3 +6,28 @@
     align-items: center;
     justify-content: center;
 }
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    /*width: 400px;*/
+    gap: 55px;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 20px;
+}
+
