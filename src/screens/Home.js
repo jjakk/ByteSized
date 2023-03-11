@@ -17,8 +17,10 @@ const Home = () => {
     return(
         <div className="container">
             <img className='logo 'src='./logo.svg'></img>
-            <Header>Weekly Bytes</Header>
-            {topicList}
+            <Header style={{alignSelf: "center"}}>Weekly Bytes</Header>
+            <div className="topic-list">
+                {topicList}
+            </div>
         </div>
     )
 }

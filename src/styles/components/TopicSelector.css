@@ -4,10 +4,13 @@
     background: #5C7781;
     height: 40px;
     padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     align-items: center;
     border-radius: 10px;
     justify-content: space-between;
     color: #C3DCE4;
+    cursor: pointer;
 }
 
 .circle {

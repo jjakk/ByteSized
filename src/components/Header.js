@@ -1,9 +1,9 @@
 import '../styles/components/Header.css';
 
 const Header = (props) => {
-    const {children} = props
+    const {children, style} = props
     return(
-        <h1 className='Header'>{children}</h1>
+        <h1 className='Header' style={style}>{children}</h1>
     )
 }
 
