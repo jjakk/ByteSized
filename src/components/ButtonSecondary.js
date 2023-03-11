@@ -1,4 +1,4 @@
-import '../styles/components/ButtonSecondary-style.css'
+import '../styles/components/ButtonSecondary.css'
 
 const ButtonSecondary = (props) => {
     const {text} = props
