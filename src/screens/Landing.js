@@ -10,12 +10,12 @@ const Landing = () => {
             <div className="sub-container">
                 <div className="header">
                     <img src="./logo.svg"></img>
-                    <Subheader>Byte-sized learning for STEM</Subheader>
+                    <Subheader style={{fontStyle: "italic", fontWeight: "regular"}}>Byte-sized learning for STEM</Subheader>
                 </div>
 
                 <div className="buttons">
-                    <Button>Sign in</Button>
-                    <Button secondary>Sign up</Button>
+                    <Button onClick={() => alert("Not implemented yet")}>Sign in</Button>
+                    <Button secondary onClick={() => alert("Not implemented yet")}>Sign up</Button>
                     <Link href="/Home" style={{alignSelf: "center"}}>Continue as guest</Link>
                 </div>
             </div>
