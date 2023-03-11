@@ -1,0 +1,28 @@
+.TopicSelector {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background: #5C7781;
+    height: 40px;
+    padding: 5px;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-between;
+    color: #C3DCE4;
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background-color: #C3DCE4;
+}
+
+.complete {
+    background-color: #729D62;
+    color: #E6E6E6;
+}
+
+.complete .circle {
+    background-color: #A1C69B;
+}
