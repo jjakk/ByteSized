@@ -1,8 +1,9 @@
 import '../styles/components/ButtonPrimary-style.css';
 
-const PrimaryButton = () => {
+const PrimaryButton = (props) => {
+    const {text} = props
     return(
-        <button className='Button'>Button</button>
+        <button className='Button'>{text}</button>
     )
 }
 
