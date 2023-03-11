@@ -1,4 +1,4 @@
-import '../styles/components/Header.css'
+import '../styles/components/Header.css';
 
 const Header = (props) => {
     const {children} = props
@@ -6,3 +6,5 @@ const Header = (props) => {
         <h1 className='Header'>{children}</h1>
     )
 }
+
+export default Header;
