@@ -36,6 +36,26 @@ const Lesson = () => {
         window.location.href = `../../${weekNumber}`;
     };
 
+    const onSubmit = (e) => {
+        e.preventDefault();
+        const text = document.querySelector(".tutor input[type='text']").value;
+        document.querySelector(".tutor input[type='text']").value = "";
+        // Send a post request to localhost:3001 with the text in the body
+        const data = { message: text, context: lesson };
+        fetch("http://localhost:3001", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        }
+        );
+    };
+
     return (
         <div className="container">
             <div className="header">
@@ -50,6 +70,10 @@ const Lesson = () => {
             <ReactMarkdown className="ReactMarkdown">{lesson}</ReactMarkdown>
             <img src={`../../../content/img/${weekNumber}/${weekNumber}-${dayNumber}_Image.svg`}></img>
             <Button onClick={onNextLesson}>Next lesson</Button>
+            <form className="tutor" onSubmit={onSubmit}>
+                <input type="text" placeholder="Ask a question" />
+                <input type="submit" />
+            </form>
         </div>
     );
 };

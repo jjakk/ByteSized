@@ -1,4 +1,8 @@
 
+.container{
+  margin-bottom: 100px;
+}
+
 .ReactMarkdown code {
   display: block;
   max-width: 300px;
@@ -6,4 +10,38 @@
   height: auto;
   word-wrap: break-word;
   white-space: pre-wrap;
+}
+
+.tutor{
+  position: fixed;
+  display: flex;
+  width: 250px;
+  flex-direction: row;
+  bottom: 0px;
+  background-color: lightgray;
+  padding: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.tutor input[type=text]{
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+  flex: 1;
+}
+
+.tutor input[type=text]:focus{
+  outline: none;
+}
+
+.tutor input[type=submit]{
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tutor input[type=submit]:focus{
+  outline: none;
 }
