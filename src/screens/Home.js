@@ -5,37 +5,30 @@ import TopicSelector from '../components/TopicSelector.js';
 const TOTAL_WEEKS = 2;
 
 const Home = () => {
-    const [topics, setTopics] = useState([]);
-    
-    const getTopics = () => {
+    const [weekTitles, setWeekTitles] = useState([]);
+
+    const getWeekTitles = async () => {
         let output = [];
+        const response = await fetch(`./content/week-names.txt`);
+        let text = await response.text();
         for(let i = 0; i < TOTAL_WEEKS; i++){
-            for(let j = 0; j < 7; j++){
-                fetch(`./content/${i}/${i}-${j}.md`)
-                .then((response) => response.text())
-                .then(text => {
-                    const title = text.substring(text.indexOf("# ")+2, text.indexOf("\n"));
-                    console.log(title);
-                    setTopics([...topics, { topic: title }]);
-                });
-            }
+            let title = text.substring(0, text.indexOf("\n"));
+            output.push(title);
+            text = text.substring(text.indexOf("\n")+1);
         }
+        
+        return output;
     };
 
     useEffect(() => {
-        getTopics();
+        getWeekTitles()
+        .then(t => setWeekTitles(t));
     }, []);
 
-    /*let topics = [
-        {topic: "Basic Computing", completed : true, week: 1}, 
-        {topic: "Basic Python", completed: false, week: 2},
-        {topic: "Basic OOP", completed: false, week: 3}
-    ]*/
-
-    let topicList = topics.length === 0 ? (
+    let topicList = weekTitles.length === 0 ? (
         <Header style={{textAlign: "center"}}>Loading</Header>
-    ) : topics.map((item, index) => {
-        return <TopicSelector key={index} props={item}></TopicSelector>
+    ) : weekTitles.map((item, index) => {
+        return <TopicSelector key={index} props={{topic: item, week: index }}></TopicSelector>
     })
 
     return(
@@ -49,4 +42,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;
