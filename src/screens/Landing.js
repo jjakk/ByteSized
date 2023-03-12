@@ -8,7 +8,7 @@ const Landing = () => {
     return (
         <div className="container">
             <div className="sub-container">
-                <div className="header">
+                <div className="header" style={{flexDirection: "column"}}>
                     <img src="./logo.svg"></img>
                     <Subheader style={{fontStyle: "italic", fontWeight: "regular"}}>Byte-sized learning for STEM</Subheader>
                 </div>
