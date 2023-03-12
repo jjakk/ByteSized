@@ -1,18 +1,22 @@
 import '../styles/components/TopicSelector.css'
 
 const TopicSelector = (props) => {
-    const {completed, week, topic} = props.props;
+    const {
+        completed,
+        week,
+        topic,
+        timeMetric="week",
+        onClick
+    } = props.props;
 
-    const onClick = () => {
-        window.location.href = `./week/${week}`;
-    };
+    const capitalize = c => c.substring(0,1).toUpperCase() + c.substring(1);
 
     return(
         <button
             className={`TopicSelector ${completed ? "complete" : ""}`}
             onClick={onClick}
         >
-            <p>Week {week}: {topic}</p>
+            <p>{capitalize(timeMetric)} {week}: {topic}</p>
             <div className='circle'></div>
         </button>
     )

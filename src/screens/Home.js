@@ -25,10 +25,14 @@ const Home = () => {
         .then(t => setWeekTitles(t));
     }, []);
 
+    const onTopicClick = (weekNumber) => {
+        window.location.href = `./week/${weekNumber}`;
+    };
+
     let topicList = weekTitles.length === 0 ? (
         <Header style={{textAlign: "center"}}>Loading</Header>
     ) : weekTitles.map((item, index) => {
-        return <TopicSelector key={index} props={{topic: item, week: index }}></TopicSelector>
+        return <TopicSelector key={index} props={{topic: item, week: index, onClick: () => {onTopicClick(index)} }}></TopicSelector>
     })
 
     return(
