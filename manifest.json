@@ -1,0 +1,10 @@
+{
+  "short_name": "ByteSized",
+  "name": "Byte-sized learning for STEM",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
