@@ -47,7 +47,6 @@ const Lesson = () => {
                 <Subheader style={{ alignSelf: "center", textAlign: "center", textDecoration: "underline" }}>Lesson {weekNumber}:{dayNumber}</Subheader>
                 <Header style={{ alignSelf: "center", textAlign: "center" }}>{headerText || "Loading"}</Header>
             </div>
-            <ReactMarkdown className="ReactMarkdown">{lesson}</ReactMarkdown>
             <img src={`../../../content/img/${weekNumber}/${weekNumber}-${dayNumber}_Image.svg`}></img>
             <Button onClick={onNextLesson}>Next lesson</Button>
         </div>
