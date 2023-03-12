@@ -1,7 +1,6 @@
 import '../styles/components/TopicSelector.css'
 
 const TopicSelector = (props) => {
-    console.log(props)
     const {completed, week, topic} = props.props;
     return(
         <div className={`TopicSelector ${completed ? "complete" : ""}`}>

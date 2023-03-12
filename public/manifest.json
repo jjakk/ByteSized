@@ -2,11 +2,6 @@
   "short_name": "ByteSized",
   "name": "Byte-sized learning for STEM",
   "icons": [
-    {
-      "src": "logo.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
   ],
   "start_url": ".",
   "display": "standalone",
