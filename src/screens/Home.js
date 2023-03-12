@@ -37,7 +37,7 @@ const Home = () => {
 
     return(
         <div className="container">
-            <img className='logo 'src='./logo.svg'></img>
+            <img className='logo' src='./logo.svg'></img>
             <Header style={{alignSelf: "center"}}>Weekly Bytes</Header>
             <div className="topic-list">
                 {topicList}
