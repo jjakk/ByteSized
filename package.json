@@ -1,6 +1,7 @@
 {
   "name": "bytesized",
   "version": "0.1.0",
+  "hompeage": "https://jjakk.github.io/ByteSized",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
