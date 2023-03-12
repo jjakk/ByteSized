@@ -45,6 +45,10 @@ const Week = () => {
         window.location.href = `./${weekNumber}/day/${dayNumber}`;
     };
 
+    const onBack = () => {
+        window.location.href = `../home`;
+    };
+
     let topicList = topics.length === 0 ? (
         <Header style={{textAlign: "center"}}>Loading</Header>
     ) : topics.map((item, index) => {
@@ -65,7 +69,7 @@ const Week = () => {
     return(
         <div className="container">
             <div className="header">
-                <BackButton/>
+                <BackButton onClick={onBack}/>
                 <img className='logo 'src='../logo.svg'></img>
             </div>
             <Header style={{ alignSelf: "center", textAlign: "center" }}>Week {weekNumber}: {headerText || "Loading"}</Header>

@@ -1,6 +1,8 @@
 
 const BackButton = (props) => {
-    const { src } = props;
+    const { src, onClick } = props;
+
+    const defualtOnclick = () => window.history.back();
 
     return (
         <button
@@ -9,7 +11,7 @@ const BackButton = (props) => {
                 border: "none",
                 cursor: "pointer"
             }}
-            onClick={() => window.history.back()}
+            onClick={onClick || defualtOnclick}
         >
             <img className='logo 'src={src || '../back.svg'}></img>
         </button>

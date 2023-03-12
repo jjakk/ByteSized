@@ -1,1 +1,13 @@
 
+.ReactMarkdown {
+    max-width: 300px;
+    width: 300px;
+    height: auto;
+    word-wrap: break-word;
+
+}
+
+.ReactMarkdown pre code {
+  overflow-wrap: anywhere;
+}
+
